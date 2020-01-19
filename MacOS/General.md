@@ -64,7 +64,7 @@ cd path/to/Payload/file
 cat Payload | gzip -d | cpio -id                   # 解包出真正的应用文件
 ```
 
-## 打开/关闭 [*SIP*](https://support.apple.com/zh-cn/HT204899) 安全机制*(高危操作)*
+## 打开/关闭 [*SIP*](https://support.apple.com/zh-cn/HT204899) 安全机制(高危操作)
 
 > 本操作可能导致系统不可逆损坏，请在执行前确保你清楚自己正在干什么！！
 
@@ -94,7 +94,7 @@ sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /Volumes/Mac
                                                                              ^ 改成你系统盘的盘符
 ```
 
-## 通过*Terminal*打开**「所有来源」**
+## 通过*Terminal*打开「所有来源」
 #### (允许从以下来源下载的App)
 
 打开 *Terminal* 根据需要运行以下命令
@@ -168,7 +168,7 @@ Command -  # 缩小图标显示 Command键 加 - (shift 是 _ 那个 -)
 /Library/Caches/com.apple.desktop.admin.png
 ```
 
-## 去除文件**「@」**特殊属性
+## 去除文件「@」特殊属性
 
 > 在HFS+文件系统里，本操作可能使软连接失效，使用时请注意。
 
@@ -237,9 +237,11 @@ killall Dock
 
 ## 优雅地在MacOS中隐藏文件
 
-本操作利用MacOS的*「[@](#user-content-去除文件特殊属性)」*属性隐藏，而非Unix标准的将文件名或文件夹名改成`.`开头的办法。
+本操作利用MacOS的「[@](#user-content-去除文件特殊属性)」属性隐藏，而非Unix标准的将文件名或文件夹名改成`.`开头的办法。
 
 利用本操作可以隐藏`/Applications`中的系统应用，而不对系统造成损害或破坏性修改。
+
+> 在**MacOS 10.14**及以后系统中，一部分系统应用已经以至`/System/Applications`目录下。
 
 （启用了[*SIP*](https://support.apple.com/zh-cn/HT204899)的系统，若要修改`/Applications`中的系统应用，请到「[恢复功能](https://support.apple.com/zh-cn/HT201314)」模式下使用本命令；或先行关闭SIP，修改完毕后再重新打开SIP）
 
