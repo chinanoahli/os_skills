@@ -251,3 +251,14 @@ killall Dock
 ----|----
 **隐藏**文件 / 文件夹|`chflags hidden 文件/文件夹`
 取消隐藏|`chflags nohidden  文件/文件夹`
+
+## 锁屏或开机登入用户账户时显示奇怪的图片
+#### (适用于 MacOS 10.15 及以上系统，其他版本尚未出现此情况)
+
+本操作可以修复因误操作，设置了错误或不适宜的图片作为桌面背景后被系统记录，导致每次登入用户账户时都显示该图片的情况
+
+删除以下路径的图片即可
+```shell
+/Library/Caches/Desktop Pictures/89EE1E2D-C40A-40B6-A7F0-F7C3DCF2EB41/lockscreen.png
+                                 ^这个UUID可能因为用户不同而变化（猜测）
+```
