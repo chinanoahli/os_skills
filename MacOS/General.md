@@ -275,9 +275,9 @@ killall Dock
 
   + 若为苹果官方提供的日历，则可以自动识别日历名称，如`日本の祝日`等
 
-4. 从“位置”菜单中选取“iCloud”，然后点按“好”
+4. 从“位置”菜单中选取“iCloud”，然后点按“好”。
 
-  + 若不需要iCloud同步，这里可以选“我的Mac”
+  + 若不需要iCloud同步，这里可以选“我的Mac上”
 
 ```
 日本节假日 https://p33-calendars.icloud.com/holidays/jp_ja.ics
