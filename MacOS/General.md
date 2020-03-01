@@ -262,3 +262,24 @@ killall Dock
 /Library/Caches/Desktop Pictures/89EE1E2D-C40A-40B6-A7F0-F7C3DCF2EB41/lockscreen.png
                                  ^这个UUID可能因为用户不同而变化（猜测）
 ```
+
+## 在日历应用中订阅苹果官方节庆日历
+
+1. 在“日历”中，选取“文件”>“新建日历订阅”。
+
+2. 输入日历的网址，然后点按“订阅”。
+
+3. 输入日历名称，然后选取一种颜色来帮助您在日历上标识这个名称。
+
+4. 从“位置”菜单中选取“iCloud”，然后点按“好”
+
+```
+日本节假日 https://p33-calendars.icloud.com/holidays/jp_ja.ics
+大陆节假日 https://p48-calendars.icloud.com/holidays/cn_zh.ics
+台湾节假日 https://p48-calendars.icloud.com/holidays/tw_zh.ics
+香港节假日 https://p48-calendars.icloud.com/holidays/hk_zh.ics
+美国节假日 https://p62-calendars.icloud.com/holidays/us_en.ics
+```
+
+#### 来源：
+1. 苹果支持知识库编号[HT202361](https://support.apple.com/zh-cn/HT202361)
