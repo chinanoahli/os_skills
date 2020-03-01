@@ -89,9 +89,9 @@ csrutil status   # 查看SIP设置 (可在正常系统下使用本命令)
 
 ```shell
 sudo /usr/libexec/repair_packages --verify --standard-pkgs /Volumes/Macintosh\ HD/
-                                                                    ^ 改成你系统盘的盘符
+                                                                    ^ 改成你系统盘的名称
 sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /Volumes/Macintosh\ HD/
-                                                                             ^ 改成你系统盘的盘符
+                                                                             ^ 改成你系统盘的名称
 ```
 
 ## 通过*Terminal*打开「所有来源」
@@ -265,13 +265,19 @@ killall Dock
 
 ## 在日历应用中订阅苹果官方节庆日历
 
+![示例图像](https://support.apple.com/library/content/dam/edam/applecare/images/zh_CN/icloud/macos-mojave-icloud-calendar-subscriptions.jpg)
+
 1. 在“日历”中，选取“文件”>“新建日历订阅”。
 
 2. 输入日历的网址，然后点按“订阅”。
 
 3. 输入日历名称，然后选取一种颜色来帮助您在日历上标识这个名称。
 
+  + 若为苹果官方提供的日历，则可以自动识别日历名称，如`日本の祝日`等
+
 4. 从“位置”菜单中选取“iCloud”，然后点按“好”
+
+  + 若不需要iCloud同步，这里可以选“我的Mac”
 
 ```
 日本节假日 https://p33-calendars.icloud.com/holidays/jp_ja.ics
