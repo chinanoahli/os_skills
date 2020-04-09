@@ -6,6 +6,8 @@
 
 > **sudo** 要求输入管理员帐号的密码，输入密码时不会显示 **∙** 或 **\***，确保输入无误后按 **enter/return** 即可。
 
+<hr>
+
 ## 禁用 *「App」尚未针对您的Mac优化* 提示
 
 打开 *Terminal* 根据需要运行以下命令
@@ -22,6 +24,8 @@
 1. [Apple官方介绍页面](https://support.apple.com/zh-cn/HT208436)
 2. [How to suppress alert 'this app is not optimized for your Mac'](https://apple.stackexchange.com/questions/324139/how-to-suppress-alert-this-app-is-not-optimized-for-your-mac)
 
+<hr>
+
 ## 修改 hostname
 
 本技巧可以在你的计算机名(Hostname)加入非英文字符。
@@ -34,6 +38,8 @@ sudo scutil --set ComputerName 计算机名
 sudo scutil --set HostName 计算机名
 ```
 
+<hr>
+
 ## 修改 Dock 图标大小
 
 本技巧可以使强迫症患者不再需要跟无法量化的水平调节器打交道。
@@ -45,6 +51,8 @@ defaults write com.apple.dock largesize -float 88  # 鼠标经过(放大)时图�
 defaults write com.apple.dock tilesize -int 48     # 普通情况下图标的大小
 killall Dock                                       # 设置完要重启一下Dock才能生效
 ```
+
+<hr>
 
 ## 解包 PKG 文件
 
@@ -64,6 +72,8 @@ cd path/to/Payload/file
 cat Payload | gzip -d | cpio -id                   # 解包出真正的应用文件
 ```
 
+<hr>
+
 ## 打开/关闭 [*SIP*](https://support.apple.com/zh-cn/HT204899) 安全机制(高危操作)
 
 > 本操作可能导致系统不可逆损坏，请在执行前确保你清楚自己正在干什么！！
@@ -78,6 +88,8 @@ csrutil enable   # 启用SIP
 csrutil clear    # 重置SIP (默认值为启用)
 csrutil status   # 查看SIP设置 (可在正常系统下使用本命令)
 ```
+
+<hr>
 
 ## 在「[恢复功能](https://support.apple.com/zh-cn/HT201314)」模式下修复全盘文件权限错误
 
@@ -94,6 +106,8 @@ sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /Volumes/Mac
                                                                              ^ 改成你系统盘的名称
 ```
 
+<hr>
+
 ## 通过*Terminal*打开「所有来源」
 #### (允许从以下来源下载的App)
 
@@ -103,6 +117,8 @@ sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /Volumes/Mac
 ----|----
 **打开**「所有来源」|`sudo spctl --master-disable`
 *关闭*「所有来源」|`sudo spctl --master-enable`
+
+<hr>
 
 ## 手动删除出错的升级安装包
 #### (包括系统更新/AppStore应用更新)
@@ -117,6 +133,8 @@ sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /Volumes/Mac
 open /Library/Updates/
 ```
 
+<hr>
+
 ## 查看/修改默认XCode的路径
 
 MacOS系统中只能同时指定一个XCode作为开发工具，如果有多个不同版本的XCode需要手动切换。
@@ -129,6 +147,8 @@ MacOS系统中只能同时指定一个XCode作为开发工具，如果有多个�
 **修改**当前启用的Xcode路径|`sudo xcode-select -switch path/to/Xcode.app`
 **安装**XCode*命令行工具*|`sudo xcode-select --install`
 
+<hr>
+
 ## iBooks数据目录
 
 打开 *Terminal* 根据需要运行以下命令可直接打开iBook数据目录
@@ -136,6 +156,8 @@ MacOS系统中只能同时指定一个XCode作为开发工具，如果有多个�
 ```shell
 open ~/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books
 ```
+
+<hr>
 
 ## 重建「打开方式」菜单
 
@@ -148,6 +170,8 @@ open ~/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books
 #### 来源：
 1. [如何搜索适用于您的文件的应用](https://support.apple.com/zh-cn/HT201290)
 
+<hr>
+
 ## 修改Dock文件夹显示的图标大小
 
 先点击在Dock中停靠的任意文件夹，使其弹出内容显示框，然后根据需要按下下面的组合键进行调整
@@ -159,6 +183,8 @@ Command -  # 缩小图标显示 Command键 加 - (shift 是 _ 那个 -)
 
 > 在一些文本编辑应用中你也可以尝试使用这组快捷键来调整字体大小。
 
+<hr>
+
 ## 修改系统登录/锁屏界面的背景图片
 #### (去除模糊效果，仅适用于10.12之前的系统)
 
@@ -167,6 +193,8 @@ Command -  # 缩小图标显示 Command键 加 - (shift 是 _ 那个 -)
 ```shell
 /Library/Caches/com.apple.desktop.admin.png
 ```
+
+<hr>
 
 ## 去除文件「@」特殊属性
 
@@ -197,6 +225,8 @@ bash-5.0$ ls -ahl
           ^ 执行后「@」属性标记消失。
 ```
 
+<hr>
+
 ## 创建 MacOS 的安装媒体
 #### (适用于 OS X 10.10 及以上系统)
 
@@ -214,6 +244,8 @@ sudo "path/to/Installer.app/Contents/Resources/createinstallmedia" --volume /Vol
 
 #### 来源：
 1. [How to make a bootable OS X 10.10 Yosemite install drive](http://www.macworld.com/article/2367748/how-to-make-a-bootable-os-x-10-10-yosemite-install-drive.html)
+
+<hr>
 
 ## 重建 Launchpad 数据库
 #### (适用于 OS X 10.10 及以上系统)
@@ -234,6 +266,7 @@ killall Dock
 #### 来源：
 1. [How to Rebuild Launchpad Database in OS X Yosemite (10.10) and Later](https://mariusvw.com/2017/10/21/how-to-rebuild-launchpad-database-in-os-x-yosemite-10-10-and-later/)
 
+<hr>
 
 ## 优雅地在MacOS中隐藏文件
 
@@ -252,6 +285,8 @@ killall Dock
 **隐藏**文件 / 文件夹|`chflags hidden 文件/文件夹`
 取消隐藏|`chflags nohidden  文件/文件夹`
 
+<hr>
+
 ## 修改锁屏或开机登入用户账户时的背景图片
 #### (适用于 MacOS 10.15 及以上系统，其他版本尚未出现此情况)
 
@@ -262,6 +297,8 @@ killall Dock
 /Library/Caches/Desktop Pictures/89EE1E2D-C40A-40B6-A7F0-F7C3DCF2EB41/lockscreen.png
                                  ^这个UUID可能因为用户不同而变化（猜测）
 ```
+
+<hr>
 
 ## 在日历应用中订阅苹果官方节庆日历
 
@@ -289,3 +326,83 @@ killall Dock
 
 #### 来源：
 1. 苹果支持知识库编号[HT202361](https://support.apple.com/zh-cn/HT202361)
+
+<hr>
+
+## 禁止某个分区自动挂载
+
+> 本操作可以禁止任意分区（可以是任意文件系统，如：NTFS、HFS+等）在系统开机、重启、或拔出USB硬盘后重新连接时自动挂载
+
+1. 先打开 *Terminal* 运行以下命令。<br/>并记录你需要禁止自动挂载的分区的**IDENTIFIER**。<br/>本文以笔者系统中的`Windows_BC`分区为例，所以在本例中应该记录的是`disk0s3`
+
+  ```shell
+  $ diskutil list    # 显示目前连接在电脑上的硬盘信息
+
+  # 以下是在 macOS 10.15中的输出示例
+
+  /dev/disk0 (internal, physical):
+     #:                       TYPE NAME                    SIZE       IDENTIFIER
+     0:      GUID_partition_scheme                        *500.3 GB   disk0
+     1:                        EFI EFI                     209.7 MB   disk0s1
+     2:                 Apple_APFS Container disk1         460.0 GB   disk0s2
+     3:       Microsoft Basic Data Windows_BC              40.1 GB    disk0s3
+
+  /dev/disk1 (synthesized):
+     #:                       TYPE NAME                    SIZE       IDENTIFIER
+     0:      APFS Container Scheme -                      +460.0 GB   disk1
+                                   Physical Store disk0s2
+     1:                APFS Volume Macintosh HD - 資料     288.3 GB   disk1s1
+     2:                APFS Volume Preboot                 83.4 MB    disk1s2
+     3:                APFS Volume Recovery                528.1 MB   disk1s3
+     4:                APFS Volume VM                      10.7 GB    disk1s4
+     5:                APFS Volume Macintosh HD            11.2 GB    disk1s5
+  ```
+
+2. 继续在 *Terminal* 运行以下命令，即可得出该分区的详细信息。<br/>记录下该分区的**Volume UUID**，所以在本例中应该记录的是`4C31E7AC-26AD-4347-8139-C3DFCEC13DBB`
+
+  ```shell
+  $ diskutil info /dev/disk0s3    # 请将例子中的`disk0s3`换成你实际要操作的`IDENTIFIER`
+
+  # 在我系统中的示例输出，
+  Device Identifier:         disk0s3
+  Device Node:               /dev/disk0s3
+  Whole:                     No
+  Part of Whole:             disk0
+
+  Volume Name:               Windows_BC
+  Mounted:                   No
+
+  Partition Type:            Microsoft Basic Data
+  File System Personality:   NTFS
+  Type (Bundle):             ntfs
+  Name (User Visible):       Windows NT File System (NTFS)
+
+  OS Can Be Installed:       No
+  Media Type:                Generic
+  Protocol:                  PCI
+  SMART Status:              Verified
+  Volume UUID:               4C31E7AC-26AD-4347-8139-C3DFCEC13DBB
+  Disk / Partition UUID:     87B2CB4F-5A5A-46FC-8EF9-5DC36D618B4B
+  Partition Offset:          460210569216 Bytes (898848768 512-Byte-Device-Blocks)
+  # 省略一部分输出内容
+  ```
+
+3. 继续在 *Terminal* 运行以下命令，并在打开的**nano**编辑器显示的文件最末尾增加一行（**请勿**删除或修改已经存在的任何内容），内容如下所示：
+
+  ```
+  $ export EDITOR=nano    # 指定shell编辑器为nano
+                             如果你安装了自己喜欢的编辑器，也可以改成你自己喜欢的编辑器，如 vim
+
+  $ sudo vifs
+  Password:               # 输入管理员密码然后回车
+
+  # 在文件末尾增加以下内容，请将UUID换成你记录下的UUID
+  UUID=4C31E7AC-26AD-4347-8139-C3DFCEC13DBB none auto noauto,ro
+
+  编辑完成后按 control + x (退出编辑器)
+  最后再键入 Y (保存修改)
+  ```
+
+4. 此时已禁止选定的分区进行自动挂载，如果需要取消禁止，可以重复第4步，删除对应的**UUID**所在的行即可
+
+> **Volume UUID**是在分区格式化时由系统自动生成，此后直到下一次格式化为止一般不再改变。<br/>假如你禁用某分区自动挂载后，又对其进行了格式化操作，可能需要按照以上步骤重新禁用。
